@@ -6,9 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"/>
     <title>My Portofolio Website</title>
 </head>
 <body>
+    <!-- Scroll Top -->
+    <a href="#home" class="scroll-top">
+        <i class='x bx-up-arrow-alt' ></i>
+    </a>
     <!-- Header -->
     <header>
         <!-- Nav container-->
@@ -143,10 +148,57 @@
         </div>
     </section>
 
+    <section class="projects container" id="projects">
+        <h2 class="heading">Projects</h2>
+        <!-- Projects content -->
+        <div class="projects-content">
+           <div class="project-box">
+            <h2>10+</h2>
+            <span>Projects Completed</span>
+           </div> 
+        </div>
+    </section>
+    <!-- Contact Form -->
+    <section class="contact container" id="contact">
+        <h2 class="heading">Contact</h2>
+        <form action="" class="contact-form" id="contact-form">
+            <input type="text" placeholder="Your Name" class="name" required>
+            <input type="email" name="" id="" placeholder="Email address" class="email" required>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Write message here" class="message" required></textarea>
+            <input type="submit" value="Submit" class="submit-btn">
+        </form>
+    </section>
+    <!-- Footer -->
+    <section class="footer-container" id="footer">
+        <div class="social">
+            <a href="mailto:justin@exampleemail.com">
+                <i class='bx bx-envelope' ></i>
+            </a>
+            <a href="">
+                <i class='bx bxl-facebook' ></i>
+            </a>
+            <a href="">
+                <i class='bx bxl-twitter' ></i>
+            </a>
+            <a href="">
+                <i class='bx bxl-instagram' ></i>
+            </a>
+        </div>
+        <div class="footer-links">
+            <a href="#">Privacy Polocy</a>
+            <a href="#">Terms Of Use</a>
+            <a href="#">Disclaimer</a>
+        </div>
+        <!-- Copyright -->
+        <p>&#169; Bernard Bebeni</p>
+    </section>
+
 
 
     <!-- Linking JS -->
     <script src="./script.js"></script>
+    <!-- Link Sweet Alert  -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> 
     
 </body>
 </html> 
