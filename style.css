@@ -104,7 +104,7 @@ body {
     top: 20px;
     border-radius: 5px;
     background: var(--bg-black-100);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
 }
@@ -115,18 +115,125 @@ body {
     display: inline-block;
     position: relative;
 }
-
+.aside .nav-toggler span::before {
+    content: '';
+    height: 2px;
+    width: 18px;
+    background: #ec1839;
+    position: absolute;
+    top: -6px;
+    left: 0;
+}
+.aside .nav-toggler span::after {
+    content: '';
+    height: 2px;
+    width: 18px;
+    background: #ec1839;
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
 .home-section {
     background-color: var(--bg-black-900);
     min-height: 100vh;
     display: block;
-    position: fixed;
-    left: 270px;
-    right: 0;
-    top: 0;
-    z-index: 0;
     opacity: 1;
+    padding: 0 30px; 
 }
-ul {
+.padd-15 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+ul { 
     list-style: none;
+}
+.home .home-img img {
+    height: 400px;
+    margin: auto;
+    border-radius: 5px;
+}
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+}
+.home {
+    min-height: 100vh;
+    display: flex;
+    color: var(--text-black-900);
+}
+.home .home-info {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+.home .home-img {
+    flex: 0 0 40%;
+    max-width: 40%;
+    /* background: #ff0000; */
+    text-align: center;
+    position: relative;
+}
+.home-img::after{
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    /*border-bottom: 10px solid #ec1839;
+    border-right: 10px solid #ec1839 ; */
+    right: 20px;
+    bottom: -40px;
+}
+.home-img::before{
+    content: '';
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    /* border-top : 10px solid #ec1839;
+    border-left: 10px solid #ec1839 ; */
+    left: -20px;
+    top: -40px;
+}
+h2.hello {
+    font-size: 28px;
+    margin: 15px 0;
+}
+h2.hello span {
+    font-family: 'Clicker Script', cursive;
+    font-size: 30px;
+    font-weight: 700;
+    color: #ec1839;
+}
+h2.my-profession {
+    font-size: 30px;
+    margin: 15px 0;
+}
+.profession {
+    color: #ec1839;
+}
+.home-info p {
+    margin-bottom: 70px;
+    font-size: 20px;
+    color: var(--text-black-700);
+}
+.btn {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    color: #ffffff;
+    border-radius: 40px;
+    display: inline-block;
+    background: #ec1839;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    border: none;
+}
+.btn:hover {
+    transform: scale(1.05);
 }
