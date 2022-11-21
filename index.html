@@ -163,10 +163,14 @@
     <section class="contact container" id="contact">
         <h2 class="heading">Contact</h2>
         <form action="" class="contact-form" id="contact-form">
-            <input type="text" placeholder="Your Name" class="name" required>
-            <input type="email" name="" id="" placeholder="Email address" class="email" required>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Write message here" class="message" required></textarea>
+            <input type="text" id="name" placeholder="Your Name" class="name" required>
+            <small class="error"></small>
+            <input type="email" name="" id="email" placeholder="Email address" class="email" required>
+            <small class="error"></small>
+            <textarea name="" id="message" cols="30" rows="10" placeholder="Write message here" class="message" required></textarea>
+            <small class="error"></small>
             <input type="submit" value="Submit" class="submit-btn">
+            <p id="success"></p>
         </form>
     </section>
     <!-- Footer -->

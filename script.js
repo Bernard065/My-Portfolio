@@ -1,47 +1,45 @@
-let menu = document.querySelector('.menu-icon');
+const nameInput = document.querySelector("#name");
+const email = document.querySelector("#email");
+const message = document.querySelector("#message");
+const succes = document.querySelector("#success");
+const errorNodes = document.querySelector(".error");
 
-menu.onclick = () => {
-    menu.classList.toggle("move");
-};
-function validate() {
-    let name = document.querySelector(".name");
-    let email = document.querySelector(".email");
-    let msg = document.querySelector(".message");
-    let submitBtn =document.querySelector(".submit-btn");
+// Validate data
+function validateForm() {
 
-    submitBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        if (name.value == "" || email.value == ""||msg == "") {
-            emptyerror();
-        } 
-        else {
-            sendmail(name.value, email.value, msg.value);
-            success;
-        }
-    });
-}
-validate();
-function sendmail(name, email, msg) {
-    emailjs.send("service_6p7znvj", "template_7qmw60", {
-        from_name: "Bernard",
-        to_name: name,
-        message: msg,
-    });
+    clearMessages();
+    let errorFlag = false;
+    
+    if(nameInput.ariaValueMax.length <1) {
+        errorNodes[0].innerText = "Name cannot be blank";
+        nameInput.classList.add("error-border");
+        errorFlag = true;
+    }
+    if(!emailIsValid(email.value)) {
+        errorNodes[1].innerText = "Invalid email address";
+        email.classList.add("error-border") 
+        errorFlag = true;  
+    }
+    if(message.value.length < 1) {
+        errorNodes[2].innerText = "Please enter message";
+        message.classList.add("error-border") 
+        errorFlag = true;
+    }
+    if(!errorFlag) {
+        succes.innerText = "Success!"
+    }
 
 }
-function emptyerror() {
-    swal({
-        title: "Oh No...",
-        text: "Fields cannot be empty!",
-        icon: "error",   
-      });
+// Success message
+function clearMessage() {
+    for(let i = 0; i <errorNodes.length; i++) {
+        errorNodes[i].innerText = "";
+    }
+    nameInput.classList.remove("error-border");
+    email.classList.remove("error-border");
+    message.classList.remove("error-border")
 }
-function success(); {
-    swal({
-        title: "Email sent successfully",
-        text: "I reply in 24hours",
-        icon: "Success",
-    });
+function emailIsValid(email) {
+    let pattern = /\S+@\S+\.\S+/;
+    return pattern.test(email);
 }
-
- 
