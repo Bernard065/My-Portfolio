@@ -11,7 +11,7 @@
 /* Style Variables */
 :root {
     --main-color: #647bff;
-    --body-color: #090a1a;
+    --body-color: #585b83;
     --heading-color: #222231;
     --box-color: #0d0f26;
     --bg-color: #fff;
@@ -60,6 +60,8 @@ header-active {
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--main-color);
+    margin: 50px;
+    margin-top: 20px;
 }
 .navbar {
     display: flex;
@@ -360,27 +362,6 @@ header-active {
 .footer-links a:hover {
     color: var(--main-color);
     transition: 0.3s all linear;
-}
-/* Scroll Top */
-.scroll-top {
-    position: fixed;
-    bottom: -100%;
-    right: 1.5rem;
-}
-.scroll-top .bx {
-    padding: 8px;
-    font-size: 1.3rem;
-    color: var(--bg-color);
-    background: var(--box-color);
-    border-radius: 0.2rem;
-}
-.scroll-top .btn:hover {
-    background: var(--container-color);
-    transition: 0.3s;
-}
-.scroll-active {
-    bottom: 2rem;
-    transition: 0.3s;
 }
 .social {
     display: flex;
